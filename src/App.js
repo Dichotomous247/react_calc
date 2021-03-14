@@ -1,22 +1,56 @@
 import logo from './logo.svg';
 import './App.css';
+import React,{useState} from "react"
 
 function App() {
+  const [blah, setBlah] = useState({
+    name: "Rohan",
+    age: 4
+  });
+
+const [numberOfSeconds,setNumberOfSeconds] = useState(0)
+const [rajeev,setRajeev] = useState('Rajeev')
+
+  async function wait(ms) {
+    return new Promise(resolve => {
+      setTimeout(resolve, ms);
+    });
+  }  
+
+  async function getData () {
+    await wait(2000);
+    return {
+      name: 'Rahul',
+      age: 25
+    };
+  }
+
+
+  async function doAThing() {
+    setRajeev(
+      if(rajeev = 'Rajeev'){
+        rajeev = 'Aaron'
+      }else{
+        setRajeev = 'Rajeev'
+      }
+    )
+    setNumberOfSeconds(1+numberOfSeconds)
+    let data = await getData()
+    console.log(data)
+
+    setBlah(data)
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <h1>{rajeev}</h1>
+        <h2>{numberOfSeconds}</h2>
+        <h1>{blah.name} is {blah.age} years old</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Modify <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <button onClick={() => doAThing()}>Do a thing</button>
       </header>
     </div>
   );
