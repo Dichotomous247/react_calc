@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+.div{
+  width: 75px;
+  height: 75px;
+  border: 1px solid;
+  text-align: center;
+}
+
+.flex{
+  display: flex;
+  justify-content: center;
+  border: none;
+}
+
+.clear {
+  width: 75px;
+}
+
+.output{
+  width: 304px;
+  height: 115px;
+  border-color: maroon;
+  border: 1px solid;
+  background-color: #443535
+}
+
+.symbol{
+  background-color: #d42c4c;
+}
+
+.symbolText{
+  color: white;
+  font-size: xx-large;
+}
